@@ -1,0 +1,32 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="userinfo">
+	  	<view class='userinfo-i'><span class='icon-user-circle fontsize'></span></view>
+  </view>
+  <view class="conlistbox">
+		<view class="conleft"><span class="icon-username left-icon"></span></view>
+		<view class="conright">
+			<input class="nameinput" placeholder="登录账号" value='{{username}}' />
+		</view>
+  </view>
+  <view class="conlistbox">
+		<view class="conleft"><span class="icon-password left-icon"></span></view>
+		<view class="conright">
+			<input class="nameinput" placeholder="登录密码" value='{{password}}' password='{{isShowPassword}}'/>
+		</view>
+		<view class="passwordshow" bindtap='toggleShowPassword'>123</view> 
+    <!-- <view class="body-view">
+          <switch checked="{{switch1Checked}}" bindchange="switch1Change"/>
+    </view> -->
+  </view>
+  <view class="autologin">
+      	<checkbox-group bindchange="checkboxChange">
+			<label class="checkbox">
+				<checkbox value="{{item.name}}" checked="{{item.checked}}"/>{{item.value}}
+			</label>
+		</checkbox-group>
+  </view>
+  <view class='buttonwiew'>
+		<button class='buttonlogin' bindtap="logIn">登录</button>
+  </view>
+</view>

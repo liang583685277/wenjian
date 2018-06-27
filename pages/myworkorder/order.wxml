@@ -1,0 +1,37 @@
+<!--pages/myworkorder/order.wxml-->
+<view class='container'>
+  <view class='header'>
+    <view class='navleft'>
+      <text class='icon-saoyisao'></text>
+    </view>
+    <view><text>我的工单</text></view>
+    <view class='navright'><text class='icon-user'></text></view>
+  </view>
+  <view class="body">
+    <view class="nav bc_white">
+      <view class="{{selected?'red':'default'}}" bindtap="selected">进行中</view>
+      <view class="{{selected1?'red':'default'}}" bindtap="selected1">已完成</view>
+      <view class='saixuan'>筛选</view>
+    </view>
+    <view class="{{selected?'show':'hidden'}}">
+      <view class="section__title">
+        <checkbox-group bindchange="checkboxChange">
+          <label class="checkbox">
+            <checkbox value="1"/>全选
+          </label>
+        </checkbox-group>
+        <button class='ploperation' bindtap="plcaozuo">批量操作</button>
+        <button class="{{plcaozuo?'show1':'hidden'}} ploperation cencle" bindtap="primary">取消</button>
+      </view>
+      <scroll-view scroll-y style="" bindscrolltoupper="upper" bindscrolltolower="lower" bindscroll="scroll" scroll-into-view="{{toView}}" scroll-top="{{scrollTop}}">
+        <view wx:for="notdata" wx:key="item">
+          <view>单号：{{item.danhao}}提成：¥{{item.ticheng}}</view>
+          <view>下单时间：{{item.xdtime}}{{item.state}}</view>
+          <view>限期时间：{{item.xqtime}}退回</view>
+        </view>
+      </scroll-view>
+    </view>
+    <!-- 已完成 -->
+    <view class="{{selected1?'show':'hidden'}}">for activity</view>
+  </view>
+</view>

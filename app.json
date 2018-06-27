@@ -1,0 +1,14 @@
+{
+  "pages": [
+   
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/myworkorder/order"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "登录",
+    "navigationBarTextStyle": "black"
+  }
+}

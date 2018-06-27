@@ -1,0 +1,89 @@
+<!--logs.wxml-->
+<view class="container">
+    <view class='topinfo'>
+		<view class='staffhead'>
+			<image src='../../img/u426.png'/>
+		</view>
+		<view class='staffname'>
+			<text>系统测试用户</text>
+		</view>
+		<view class='infolist'>
+			<view class='list-info list-right'>
+				<view class='list-size'>
+					<text>¥{{sttafinfo.money}}</text>
+				</view>
+				<view class='list-top'>
+					<text>本月提成</text>
+				</view>
+			</view>
+			<view class='list-info list-right'>
+				<view class='list-size'>
+					<text>¥{{sttafinfo.unfinishedgd}}</text>
+				</view>
+				<view class='list-top'>
+					<text>本月进行中工单</text>
+				</view>
+			</view>
+			<view class='list-info'>
+				<view class='list-size'>
+					<text>¥{{sttafinfo.donegd}}</text>
+				</view>
+				<view class='list-top'>
+					<text>本月已完成工单</text>
+				</view>
+			</view>
+		</view>
+	</view>
+	<view class='menu'>
+		<view class='menu-list'>
+			<view class='menu-icon'>
+				<text class='icon-saoyisao'></text>
+			</view>
+			<view class='icon-text-font'>
+				<text>扫一扫</text>
+			</view>
+		</view>
+		<view class='menu-list' bindtap='myworkorder'>
+			<view class='menu-icon'>
+				<text class='icon-cart'></text>
+			</view>
+			<view class='icon-text-font'>
+				<text>我的工单</text>
+			</view>
+		</view>
+		<view class='menu-list'>
+			<view class='menu-icon'>
+				<text class='icon-alert'></text>
+			</view>
+			<view class='icon-text-font'>
+				<text>工作安排</text>
+			</view>
+		</view>
+	</view>
+	<view class='menu'>
+		<view class='menu-list'>
+			<view class='menu-icon'>
+				<text class='icon-money'></text>
+			</view>
+			<view class='icon-text-font'>
+				<text>提成明细</text>
+			</view>
+		</view>
+		<view class='menu-list'>
+			<view class='menu-icon'>
+				<text class='icon-info'></text>
+			</view>
+			<view class='icon-text-font'>
+				<text>报料申请</text>
+			</view>
+		</view>
+		<view class='menu-list'>
+			<view class='menu-icon'>
+				<text class='icon-set'></text>
+			</view>
+			<view class='icon-text-font'>
+				<text>修改密码</text>
+			</view>
+		</view>
+	</view>
+</view>
